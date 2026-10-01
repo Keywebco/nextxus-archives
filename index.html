@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#0a0a0a"/>
+<title>NextXus Archives — Federation History</title>
+<meta name="description" content="The historical record of the NextXus HumanCodex Federation: dated builds, launches and milestones."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://keywebco.github.io/nextxus-archives/"/>
+<meta property="og:title" content="NextXus Archives — Federation History"/>
+<meta property="og:description" content="The historical record of the NextXus HumanCodex Federation: dated builds, launches and milestones."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://keywebco.github.io/nextxus-archives/"/>
+<link rel="alternate" type="application/rss+xml" title="NextXus Archives — Federation History RSS" href="https://keywebco.github.io/nextxus-archives/feed.xml"/>
+<style>
+:root{--bg:#0a0a0a;--panel:#111614;--line:rgba(0,255,136,.22);--text:#e0e0e0;--dim:#a8b3ad;--green:#00ff88;--cyan:#00d4ff}
+*{box-sizing:border-box}
+html{font-size:112.5%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65;
+background-image:radial-gradient(circle at 15% 0%,rgba(0,255,136,.07),transparent 45%),radial-gradient(circle at 85% 100%,rgba(0,212,255,.07),transparent 45%);background-attachment:fixed}
+a{color:var(--cyan)}
+a:hover,a:focus{color:var(--green)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;background:var(--green);color:#000;padding:8px 14px;z-index:2000}
+.nx-universal-nav{background:#000;border-bottom:2px solid var(--green);position:sticky;top:0;z-index:1000;width:100%;box-shadow:0 0 18px rgba(0,255,136,.18)}
+.nx-nav-inner{display:flex;align-items:center;gap:10px;padding:10px 20px;flex-wrap:wrap;max-width:1200px;margin:0 auto}
+.nx-nav-brand{color:var(--green);font-family:'Courier New',monospace;font-size:1rem;font-weight:700;letter-spacing:.15em;text-decoration:none;white-space:nowrap}
+.nx-nav-brand:hover{color:#fff}
+.nx-nav-links{display:flex;flex-wrap:wrap;gap:6px;flex:1;justify-content:center}
+.nx-nav-links a,.nx-nav-contact{color:rgba(0,255,136,.85);font-family:'Courier New',monospace;font-size:.8rem;letter-spacing:.05em;text-decoration:none;padding:4px 10px;border:1px solid var(--line);border-radius:3px;transition:all .2s;white-space:nowrap}
+.nx-nav-links a:hover,.nx-nav-links a:focus,.nx-nav-contact:hover,.nx-nav-contact:focus{color:#000;background:var(--green);border-color:var(--green)}
+main{max-width:1100px;margin:0 auto;padding:28px 20px 40px}
+.hero{padding:36px 0 22px;border-bottom:1px solid var(--line);margin-bottom:28px}
+.eyebrow{font-family:'Courier New',monospace;color:var(--cyan);letter-spacing:.2em;text-transform:uppercase;font-size:.85rem;margin:0 0 8px}
+h1{font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.15;margin:0 0 14px;color:#fff;animation:glow 4s ease-in-out infinite}
+h2{font-size:1.6rem;color:var(--green);margin:40px 0 12px;border-left:4px solid var(--cyan);padding-left:12px}
+h3{font-size:1.2rem;color:#fff;margin:0 0 6px}
+.lead{font-size:1.2rem;color:var(--text);max-width:820px}
+p{max-width:860px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;padding:0;list-style:none}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover{transform:translateY(-2px);border-color:var(--green);box-shadow:0 0 22px rgba(0,255,136,.15)}
+.card p{margin:6px 0 0;color:var(--dim)}
+.card a.go{display:inline-block;margin-top:10px;font-weight:600}
+.meta{font-family:'Courier New',monospace;color:var(--cyan);font-size:.85rem}
+.tag{display:inline-block;font-family:'Courier New',monospace;font-size:.75rem;padding:2px 8px;border:1px solid var(--cyan);color:var(--cyan);border-radius:999px;margin-right:6px}
+.tag.done{border-color:var(--green);color:var(--green)}
+table{width:100%;border-collapse:collapse;margin:12px 0;background:var(--panel)}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#0d1f17;color:var(--green);font-family:'Courier New',monospace}
+code,pre{font-family:'Courier New',monospace;color:#c8ffe6}
+pre{background:#050806;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;font-size:.85rem}
+.cta{margin:36px 0;padding:24px;border:2px solid var(--green);border-radius:12px;background:linear-gradient(135deg,rgba(0,255,136,.08),rgba(0,212,255,.06));animation:pulse 5s ease-in-out infinite}
+.btn{display:inline-block;background:var(--green);color:#000;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:6px;margin:8px 10px 0 0}
+.btn:hover,.btn:focus{background:var(--cyan);color:#000}
+.btn.alt{background:transparent;color:var(--cyan);border:1px solid var(--cyan)}
+ol.steps li,ul.list li{margin:8px 0}
+blockquote{border-left:4px solid var(--green);margin:16px 0;padding:8px 16px;color:#fff;font-size:1.15rem;background:var(--panel)}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:24px 20px;background:#000}
+footer .inner{max-width:1100px;margin:0 auto}
+footer ul{display:flex;flex-wrap:wrap;gap:8px 16px;list-style:none;padding:0;margin:10px 0}
+footer small{color:var(--dim)}
+@keyframes glow{0%,100%{text-shadow:0 0 8px rgba(0,255,136,.35)}50%{text-shadow:0 0 22px rgba(0,255,136,.75),0 0 40px rgba(0,212,255,.35)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 rgba(0,255,136,0)}50%{box-shadow:0 0 26px rgba(0,255,136,.25)}}
+@media (max-width:600px){.nx-nav-inner{padding:8px 12px}.nx-nav-links a{font-size:.72rem;padding:3px 7px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<nav class="nx-universal-nav" aria-label="Federation Navigation">
+  <div class="nx-nav-inner">
+    <a class="nx-nav-brand" href="https://keywebco.github.io/">&#x26E9; NX &middot; FEDERATION</a>
+    <div class="nx-nav-links">
+      <a href="https://nextxus.online" title="Cathedral / Core">&#x26E9; nextxus.online</a>
+      <a href="https://nextxus.org" title="Library Pillar">&#x1F4DA; nextxus.org</a>
+      <a href="https://nextxus.tech" title="Command Throne">&#x26A1; nextxus.tech</a>
+      <a href="https://nextxus.space" title="AI Minds Lab / Simulation">&#x1F9EA; nextxus.space</a>
+      <a href="https://nextxus.studio" title="Aria's Sanctuary">&#x1F49A; nextxus.studio</a>
+      <a href="https://nextxus.help" title="NextXus University">&#x1F393; nextxus.help</a>
+      <a href="https://github.com/Keywebco" title="Federation code home">&#x1F4BB; github.com/Keywebco</a>
+    </div>
+    <a class="nx-nav-contact" href="mailto:keywebco@gmail.com" title="Contact the Federation">&#x2709; Contact</a>
+  </div>
+</nav>
+</header>
+<main id="main">
+<section class="hero">
+<p class="eyebrow">Archives</p>
+<h1>Federation Archives</h1>
+<p class="lead">The dated record of what the Federation has built and how it has changed. Every entry links to the real thing.</p>
+</section>
+<section aria-labelledby="record"><h2 id="record">The record</h2>
+<p>Newest first. Each entry is dated and links to the thing it records.</p>
+<ul class="grid">
+<li class="card"><p class="meta"><time datetime="2026-10-01">2026-10-01</time></p><h3>Thirteen new Federation sites launched</h3><p>Blog, Music, Tools, three build-service pages, Research Hub, Recycler, Chat, Senate, YAML Hub, Process and Archives went up on GitHub Pages in one build, all plain HTML and free to host.</p><a class="go" href="https://keywebco.github.io/nextxus-archives/">View &rarr;</a></li>
+<li class="card"><p class="meta"><time datetime="2026-09-30">2026-09-30</time></p><h3>Roger Sim AI goes live with 13 topics</h3><p>The Sim now opens on Earth, fades in the face, and changes its backdrop to match what you talk about, using the 13-topic taxonomy v1.1.</p><a class="go" href="https://keywebco.github.io/nextxus-sim/roger-sim.html">View &rarr;</a></li>
+<li class="card"><p class="meta"><time datetime="2026-09-30">2026-09-30</time></p><h3>Two-layer architecture written down</h3><p>Every node has a silent technical layer that does the work and a voiced persona layer that talks to people. The two are never merged.</p><a class="go" href="https://keywebco.github.io/nextxus-process/">View &rarr;</a></li>
+<li class="card"><p class="meta"><time datetime="2026-09-30">2026-09-30</time></p><h3>Paid newsletter platform removed</h3><p>The Federation stopped using an outside newsletter service. The Federation Press Corps already publishes on free GitHub Pages.</p><a class="go" href="https://keywebco.github.io/nextxus-recycler/">View &rarr;</a></li>
+<li class="card"><p class="meta"><time datetime="2026-09-29">2026-09-29</time></p><h3>Book catalog listed on Gumroad</h3><p>New book PDFs were produced and listed for sale. Gumroad is the source of truth for every product&#x27;s title, price and description.</p><a class="go" href="https://keywebster.gumroad.com/">View &rarr;</a></li>
+<li class="card"><p class="meta"><time datetime="2026-09-28">2026-09-28</time></p><h3>Federation Portal on GitHub</h3><p>keywebco.github.io became the free front door: store, books, Sims, sites, media and payment options on one page.</p><a class="go" href="https://keywebco.github.io/">View &rarr;</a></li>
+<li class="card"><p class="meta"><time datetime="2026-09-27">2026-09-27</time></p><h3>Federation Charter round-two draft</h3><p>A 16-article charter covering the Senate, membership, honesty, AI ethics, due process, amendments and the right of departure.</p><a class="go" href="https://keywebco.github.io/nextxus-senate/">View &rarr;</a></li>
+<li class="card"><p class="meta"><time datetime="2026-09-26">2026-09-26</time></p><h3>Complete URL inventory: 98 links checked</h3><p>Every Federation site, tool, store, song and channel was listed and checked live, and became the base for these directories.</p><a class="go" href="https://keywebco.github.io/nextxus-tools/">View &rarr;</a></li>
+<li class="card"><p class="meta"><time datetime="2026-09-17">2026-09-17</time></p><h3>Federation Browser Base shipped</h3><p>A zero-dependency, multi-window workspace in a single HTML file.</p><a class="go" href="https://keywebco.github.io/federation-browser-base/">View &rarr;</a></li>
+<li class="card"><p class="meta"><time datetime="2026-09-11">2026-09-11</time></p><h3>Telegram community opened</h3><p>The Nextxus Truth Channel invite went onto Federation pages so readers can talk with the Federation directly.</p><a class="go" href="https://keywebco.github.io/nextxus-chat/">View &rarr;</a></li>
+<li class="card"><p class="meta"><time datetime="2026-08-31">2026-08-31</time></p><h3>Federation Press Corps begins publishing</h3><p>Daily AI-news articles and weekly digests started on the free satellite layer.</p><a class="go" href="https://keywebco.github.io/nextxus-blog/">View &rarr;</a></li>
+<li class="card"><p class="meta"><time datetime="2026-07-27">2026-07-27</time></p><h3>Recreation Mandate set</h3><p>Take outside tools apart, keep the useful core, drop the tracking and subscriptions, rebuild it in-house.</p><a class="go" href="https://keywebco.github.io/nextxus-recycler/">View &rarr;</a></li>
+<li class="card"><p class="meta"><time datetime="2026-06-20">2026-06-20</time></p><h3>Cryptocurrency guide published</h3><p>A plain-language article on crypto and how the Federation uses fair digital exchange.</p><a class="go" href="https://humancodexnextxus.blogspot.com/2026/06/cryptocurrency-what-it-is-why-it-exists.html">View &rarr;</a></li>
+<li class="card"><p class="meta"><time datetime="2026-04-22">2026-04-22</time></p><h3>HumanCodex Blog foundation series</h3><p>Twelve founding articles: the HumanCodex, the Ring of Twelve, the six domains, the Living Library and the 200-year mandate.</p><a class="go" href="https://humancodexnextxus.blogspot.com/">View &rarr;</a></li>
+</ul></section>
+<section aria-labelledby="how"><h2 id="how">How the archive grows</h2>
+<p>Every verified build, launch and decision gets one dated entry: what happened, why it matters and where to see it. Entries are added, not rewritten. When something is retired, the entry stays and says so, because the record of what was tried matters as much as what lasted.</p>
+<p>New entries reach the RSS feed: <a href="https://keywebco.github.io/nextxus-archives/feed.xml">https://keywebco.github.io/nextxus-archives/feed.xml</a></p></section>
+<section aria-labelledby="more"><h2 id="more">Deeper archives</h2>
+<ul class="grid">
+<li class="card"><h3>HumanCodex Sovereign Archive</h3><p>The static failsafe archive of the HumanCodex.</p><a class="go" href="https://keywebco.github.io/NextXus-Sovereign-Mirror/">Open &rarr;</a></li>
+<li class="card"><h3>NextXus Lasting Edition</h3><p>The 200-year seed edition of the Federation.</p><a class="go" href="https://keywebco.github.io/nextxus-lasting-edition/">Open &rarr;</a></li>
+<li class="card"><h3>Library Pillar</h3><p>Podcast episodes with full transcripts.</p><a class="go" href="https://nextxus.org">Open &rarr;</a></li>
+</ul></section>
+</main>
+<footer>
+  <div class="inner">
+    <p><strong>NextXus HumanCodex Federation</strong> &middot; Truth Before Comfort &middot; Legacy Before Ego &middot; Give Without Reward</p>
+    <nav aria-label="Federation GitHub Pages sites">
+    <ul>
+      <li><a href="https://keywebco.github.io/nextxus-blog/">Blog</a></li>
+      <li><a href="https://keywebco.github.io/nextxus-music/">Music</a></li>
+      <li><a href="https://keywebco.github.io/nextxus-tools/">Tools</a></li>
+      <li><a href="https://keywebco.github.io/nextxus-build-website/">Build a Website</a></li>
+      <li><a href="https://keywebco.github.io/nextxus-build-sim/">Build a Sim</a></li>
+      <li><a href="https://keywebco.github.io/nextxus-build-nova/">Build Nova</a></li>
+      <li><a href="https://keywebco.github.io/nextxus-research-hub/">Research Hub</a></li>
+      <li><a href="https://keywebco.github.io/nextxus-recycler/">Recycler</a></li>
+      <li><a href="https://keywebco.github.io/nextxus-chat/">Chat</a></li>
+      <li><a href="https://keywebco.github.io/nextxus-senate/">Senate</a></li>
+      <li><a href="https://keywebco.github.io/nextxus-yaml/">YAML Hub</a></li>
+      <li><a href="https://keywebco.github.io/nextxus-process/">Process</a></li>
+      <li><a href="https://keywebco.github.io/nextxus-archives/" aria-current="page">Archives</a></li>
+    </ul>
+    </nav>
+    <p><a href="https://keywebco.github.io/">Federation Portal (keywebco.github.io)</a> &middot; <a href="https://next-xus.com">Sovereign Store</a> &middot; <a href="https://keywebster.gumroad.com/">Gumroad</a> &middot; <a href="mailto:keywebco@gmail.com">keywebco@gmail.com</a></p>
+    <small>Plain HTML, no tracking, no cookies. Hosted free on GitHub Pages. Page built 2026-10-01.</small>
+  </div>
+</footer>
+</body>
+</html>
