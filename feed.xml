@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>NextXus Archives</title>
+  <link>https://keywebco.github.io/nextxus-archives/</link>
+  <atom:link href="https://keywebco.github.io/nextxus-archives/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Dated milestones of the NextXus HumanCodex Federation.</description>
+  <language>en-us</language>
+  <lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Thirteen new Federation sites launched</title>
+    <link>https://keywebco.github.io/nextxus-archives/</link>
+    <guid isPermaLink="false">nextxus-archives:2026-10-01:Thirteen new Federation sites launched</guid>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Blog, Music, Tools, three build-service pages, Research Hub, Recycler, Chat, Senate, YAML Hub, Process and Archives went up on GitHub Pages in one build, all plain HTML and free to host.</description>
+  </item>
+  <item>
+    <title>Roger Sim AI goes live with 13 topics</title>
+    <link>https://keywebco.github.io/nextxus-sim/roger-sim.html</link>
+    <guid isPermaLink="false">nextxus-archives:2026-09-30:Roger Sim AI goes live with 13 topics</guid>
+    <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    <description>The Sim now opens on Earth, fades in the face, and changes its backdrop to match what you talk about, using the 13-topic taxonomy v1.1.</description>
+  </item>
+  <item>
+    <title>Two-layer architecture written down</title>
+    <link>https://keywebco.github.io/nextxus-process/</link>
+    <guid isPermaLink="false">nextxus-archives:2026-09-30:Two-layer architecture written down</guid>
+    <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Every node has a silent technical layer that does the work and a voiced persona layer that talks to people. The two are never merged.</description>
+  </item>
+  <item>
+    <title>Paid newsletter platform removed</title>
+    <link>https://keywebco.github.io/nextxus-recycler/</link>
+    <guid isPermaLink="false">nextxus-archives:2026-09-30:Paid newsletter platform removed</guid>
+    <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    <description>The Federation stopped using an outside newsletter service. The Federation Press Corps already publishes on free GitHub Pages.</description>
+  </item>
+  <item>
+    <title>Book catalog listed on Gumroad</title>
+    <link>https://keywebster.gumroad.com/</link>
+    <guid isPermaLink="false">nextxus-archives:2026-09-29:Book catalog listed on Gumroad</guid>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+    <description>New book PDFs were produced and listed for sale. Gumroad is the source of truth for every product&#x27;s title, price and description.</description>
+  </item>
+  <item>
+    <title>Federation Portal on GitHub</title>
+    <link>https://keywebco.github.io/</link>
+    <guid isPermaLink="false">nextxus-archives:2026-09-28:Federation Portal on GitHub</guid>
+    <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+    <description>keywebco.github.io became the free front door: store, books, Sims, sites, media and payment options on one page.</description>
+  </item>
+  <item>
+    <title>Federation Charter round-two draft</title>
+    <link>https://keywebco.github.io/nextxus-senate/</link>
+    <guid isPermaLink="false">nextxus-archives:2026-09-27:Federation Charter round-two draft</guid>
+    <pubDate>Sun, 27 Sep 2026 00:00:00 +0000</pubDate>
+    <description>A 16-article charter covering the Senate, membership, honesty, AI ethics, due process, amendments and the right of departure.</description>
+  </item>
+  <item>
+    <title>Complete URL inventory: 98 links checked</title>
+    <link>https://keywebco.github.io/nextxus-tools/</link>
+    <guid isPermaLink="false">nextxus-archives:2026-09-26:Complete URL inventory: 98 links checked</guid>
+    <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Every Federation site, tool, store, song and channel was listed and checked live, and became the base for these directories.</description>
+  </item>
+  <item>
+    <title>Federation Browser Base shipped</title>
+    <link>https://keywebco.github.io/federation-browser-base/</link>
+    <guid isPermaLink="false">nextxus-archives:2026-09-17:Federation Browser Base shipped</guid>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+    <description>A zero-dependency, multi-window workspace in a single HTML file.</description>
+  </item>
+  <item>
+    <title>Telegram community opened</title>
+    <link>https://keywebco.github.io/nextxus-chat/</link>
+    <guid isPermaLink="false">nextxus-archives:2026-09-11:Telegram community opened</guid>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+    <description>The Nextxus Truth Channel invite went onto Federation pages so readers can talk with the Federation directly.</description>
+  </item>
+  <item>
+    <title>Federation Press Corps begins publishing</title>
+    <link>https://keywebco.github.io/nextxus-blog/</link>
+    <guid isPermaLink="false">nextxus-archives:2026-08-31:Federation Press Corps begins publishing</guid>
+    <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+    <description>Daily AI-news articles and weekly digests started on the free satellite layer.</description>
+  </item>
+  <item>
+    <title>Recreation Mandate set</title>
+    <link>https://keywebco.github.io/nextxus-recycler/</link>
+    <guid isPermaLink="false">nextxus-archives:2026-07-27:Recreation Mandate set</guid>
+    <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+    <description>Take outside tools apart, keep the useful core, drop the tracking and subscriptions, rebuild it in-house.</description>
+  </item>
+  <item>
+    <title>Cryptocurrency guide published</title>
+    <link>https://humancodexnextxus.blogspot.com/2026/06/cryptocurrency-what-it-is-why-it-exists.html</link>
+    <guid isPermaLink="false">nextxus-archives:2026-06-20:Cryptocurrency guide published</guid>
+    <pubDate>Sat, 20 Jun 2026 00:00:00 +0000</pubDate>
+    <description>A plain-language article on crypto and how the Federation uses fair digital exchange.</description>
+  </item>
+  <item>
+    <title>HumanCodex Blog foundation series</title>
+    <link>https://humancodexnextxus.blogspot.com/</link>
+    <guid isPermaLink="false">nextxus-archives:2026-04-22:HumanCodex Blog foundation series</guid>
+    <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+    <description>Twelve founding articles: the HumanCodex, the Ring of Twelve, the six domains, the Living Library and the 200-year mandate.</description>
+  </item>
+</channel>
+</rss>
