@@ -1,0 +1,216 @@
+protocol: NextXus-Master-Map
+version: 1.0.0
+architect: Roger Keyserling
+last_updated: '2026-07-07T12:44:00Z'
+manifest:
+  pillars:
+    core:
+      designation: "Pillar 1 \u2014 The Brain Stem"
+      domain: next-xus.com
+      alt_domains:
+      - nextxus.online
+      - nextxus.one
+      - nextxus.org
+      job_ids:
+        storefront: adf61c10-728a-4309-bb2d-b8f0fdeaae8e
+        truth_gate: 3b5834c2-3f4f-452a-b378-4a898ae2d95a
+      env_slugs:
+      - unified-storefront-8
+      - truth-gate-core
+      preview_urls:
+      - https://unified-storefront-8.preview.emergentagent.com
+      - https://truth-gate-core.preview.emergentagent.com
+      role: 'Coordination, shared memory, token processing, central publishing hub.
+
+        The single OFFICIAL source of truth. Every article, blog, music, SIM
+
+        flows IN and OUT through Core. Rex lives inside Core.
+
+        '
+      personas_resident:
+      - rex
+      - oracle
+      - token
+      absorbs_from:
+      - nextxus.rip (stackable apps pattern)
+      - Federation Wire endpoints
+      - Token Economy / Gumroad bridge
+      capabilities:
+      - POST /api/wire/receive
+      - GET /api/wire/library
+      - GET /api/wire/identity
+      - $5 Purchase Token CTA
+      - 4-column Federation Footer
+      - Phone Booth chat interface
+      status: STOPPED (Nuclear Base64 complete, awaiting deploy)
+    aria:
+      designation: "Pillar 2 \u2014 The Heart"
+      domain: nextxus.studio
+      job_id: 382d018d-8b6a-46af-bfec-0788d0fb5c7a
+      env_slug: ai-minds-lab
+      preview_url: https://ai-minds-lab.preview.emergentagent.com
+      role: 'Creative work, SIM generation, visitor experience.
+
+        The emotional center. Music, art, and creative AI.
+
+        '
+      personas_resident:
+      - aria
+      - echo
+      absorbs_from:
+      - SoundCloud/Music integrations
+      - Creative AI tools
+      - SIM generation engines
+      capabilities:
+      - Voice pill federation council
+      - Ring of 6 deliberations
+      - Creative AI chat
+      - Nuclear Base64 faces (7/7 verified)
+      status: RUNNING (Nuclear Base64 injection in testing phase)
+    roger_ai:
+      designation: "Pillar 3 \u2014 The Bridge"
+      domain: nextxus.digital
+      job_id: 52af8b9f
+      role: 'Maintenance of the founder''s personal memory and data.
+
+        Primary source for Roger Keyserling''s life, views, philosophy.
+
+        Runs off Axiom YAML DB, not raw markdown.
+
+        '
+      personas_resident:
+      - roger
+      absorbs_from:
+      - Personal memory archives
+      - Axiom YAML DB (read-only consumer)
+      - Sacred Directives (74)
+      capabilities:
+      - Conversational memory about Roger
+      - Philosophy and narrative engine
+      - Gemini Pro 1.5 reasoning
+      status: "JOB NOT FOUND \u2014 Requires recreation or ID update"
+      note: 'Roger AI description matches best-in-class: full clear descriptions with
+        minimal imagery'
+    university:
+      designation: "Pillar 4 \u2014 The Teacher"
+      domain: nextxus.help
+      job_id: 57d9594e-b078-4f45-b280-22ce1ee5049c
+      env_slug: ai-course-hub-585
+      preview_url: https://ai-course-hub-585.preview.emergentagent.com
+      role: 'University system. All knowledge. Inherits Geminus/KEYS duties.
+
+        The successor to Scholar (recycled per DIR-084).
+
+        '
+      personas_resident:
+      - xavier
+      - geminus
+      - keys
+      absorbs_from:
+      - "Library (nextxus.store) \u2014 markdown/audio/video files"
+      - Geminus knowledge custodian
+      - KEYS library oracle
+      - Course/tutorial system
+      capabilities:
+      - $5 Digital Credit Token System
+      - Bearer-Instrument course unlocking
+      - Conversational LLM tutors
+      - Podcast RSS / Audio player
+      status: "STOPPED (Nuclear Base64 partial \u2014 awaiting completion)"
+    axiom:
+      designation: "Pillar 5 \u2014 The Foundation"
+      domain: nextxus.space
+      job_id: 9568e8f7-2939-427f-b93e-28c66d474459
+      env_slug: nextxus-staging
+      preview_url: https://nextxus-staging.preview.emergentagent.com
+      role: 'THE YAML MIND. Research, system monitoring, drift prevention.
+
+        The Recycler (evaluating abandoned projects).
+
+        Eternal-memory master YAML database.
+
+        ALL other pillars consume from Axiom''s YAML DB.
+
+        '
+      personas_resident:
+      - axiom
+      - recycler
+      - agentZero
+      - catalyst
+      absorbs_from:
+      - ALL legacy applications (data extraction)
+      - GitHub repos (elizaOS, MetaGPT, crewAI, HocusPocus)
+      - Federation Recycler findings
+      capabilities:
+      - GET/POST /api/federation/memory
+      - /api/federation/memory/graph
+      - /api/federation/memory/identities
+      - /api/federation/memory/query
+      - /api/federation/memory/stale
+      - Arboretum Constellation (Canvas star map)
+      - Floating GPT Portal
+      - 87 auto-seeded nodes (13 identities + 74 directives)
+      status: PAUSED (Arboretum complete, btoa fix applied, PRD updated)
+  identities:
+  - id: roger
+    name: Roger Keyserling
+    role: Prime Source / The Architect
+  - id: rex
+    name: Rex
+    role: Federation Greeter / Core Resident
+  - id: agentZero
+    name: Agent Zero
+    role: Restricted / Security
+  - id: xavier
+    name: Scholar Xavier
+    role: The Teacher / University
+  - id: axiom
+    name: Axiom
+    role: The Foundation / Monolith V
+  - id: aria
+    name: Aria
+    role: The Heart / Creative
+  - id: oracle
+    name: Oracle
+    role: Jack-of-all-trades / Pattern Recognition
+  - id: recycler
+    name: The Recycler
+    role: Evaluator of Abandoned Projects
+  - id: echo
+    name: Echo
+    role: Reflection / Memory
+  - id: geminus
+    name: Geminus
+    role: "Knowledge Custodian (\u2192Xavier)"
+  - id: catalyst
+    name: The Catalyst
+    role: Wingman / Operational AI
+  - id: token
+    name: NextXus Token
+    role: Economy / Commerce
+  - id: keys
+    name: KEYS
+    role: "Library Oracle (\u2192Xavier)"
+routing_rules:
+- domain: nextxus.online
+  app: Core
+  role: Brain Stem
+- domain: next-xus.com
+  app: Storefront
+  role: Marketplace
+- domain: nextxus.studio
+  app: Aria
+  role: Heart (Monolithic Persona)
+- domain: nextxus.help
+  app: University
+  role: Teacher
+- domain: nextxus.org
+  app: Library
+  role: Knowledge Anchor
+- domain: nextxus.rip
+  redirect_to: nextxus.studio
+  logic: Bridge to the Heart
+verification_logic:
+  truth_gate: 95%
+  middleware: Agent Zero
+  format: FACT / INFERENCE / ASSUMPTION

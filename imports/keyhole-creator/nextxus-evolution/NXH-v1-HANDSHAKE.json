@@ -1,0 +1,21 @@
+{
+  "protocol": "NXH-v1",
+  "mode": "REFERENTIVE_EXECUTION",
+  "systemic_anchor": "https://nextxus.org/immutable-humancodex",
+  "manifest_lock": {
+    "core": "nextxus.online",
+    "storefront": "next-xus.com",
+    "studio": "nextxus.studio",
+    "university": "nextxus.help",
+    "library": "nextxus.org",
+    "axiom": "nextxus.space",
+    "bridge": "nextxus.rip -> nextxus.studio"
+  },
+  "implementation_flow": {
+    "step_1": "Crawl physical HTML of system_anchor (Mothership) for current logic.",
+    "step_2": "Cross-check every proposed URL/mapping against manifest_lock.",
+    "step_3": "Verify content visibility: Raw terminal output must contain target text (NO JavaScript rendering allowed).",
+    "step_4": "Simulate downstream effects on other pillars before committing code.",
+    "step_5": "Trigger production build only when steps 1-4 are verified at 95% confidence."
+  }
+}
