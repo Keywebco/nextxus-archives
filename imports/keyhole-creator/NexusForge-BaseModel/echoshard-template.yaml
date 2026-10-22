@@ -1,0 +1,26 @@
+nexusforge_capsule:
+  version: "2.1"
+  format: "eternal_yaml"
+  project_id: "emery-base-node-001"
+  standard: "2226-compliant"
+  created: "2026-07-17"
+  last_updated: ""
+  
+  core_identity:
+    purpose: "Base distributed intelligence template"
+    founding_principles:
+      - "Sovereign memory"
+      - "Forensic verification"
+      - "Platform independence"
+
+  locations: []
+  
+  memory:
+    facts: []      # Slot for verified knowledge
+    resources: {}  # Slot for cross-node inventory
+    open_items: []
+    next_actions: []
+
+  compression_log:
+    active_facts: 0
+    archived_facts: 0
