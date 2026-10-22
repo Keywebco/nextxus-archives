@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Omni AI Orb + Memory Panel</title>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(ellipse at center, #0d0d0d 0%, #000000 100%);
+      color: #fff;
+    }
+    canvas#stars {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      font-size: 1.2em;
+      letter-spacing: 2px;
+      color: #00ccff;
+      text-shadow: 0 0 8px #00ccff;
+    }
+    #tabs { display: flex; justify-content: center; margin-top: 20px; }
+    .tab-btn {
+      background: #111;
+      color: #0ff;
+      border: 1px solid #0ff;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    .tab-btn.active {
+      background: #0ff;
+      color: #000;
+    }
+    .panel { display: none; padding: 20px; max-width: 900px; margin: auto; }
+    .panel.active { display: block; }
+    textarea, pre, input[type="file"] {
+      width: 100%;
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #555;
+    }
+    button {
+      background: #0ff;
+      color: #000;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    #reply { white-space: pre-wrap; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+<header>💠 Truth Before Comfort — Reflection Before Reaction</header>
+<div id="tabs">
+  <button class="tab-btn active" onclick="showPanel('chat')">💬 Ask Omni</button>
+  <button class="tab-btn" onclick="showPanel('memory')">📚 Memory Panel</button>
+</div>
+
+<div id="chat" class="panel active">
+  <h2>Talk to Omni</h2>
+  <textarea id="prompt" placeholder="Ask Omni anything..."></textarea><br>
+  <button onclick="askOmni()">Send</button>
+  <div id="reply">Awaiting your question...</div>
+</div>
+
+<div id="memory" class="panel">
+  <h2>Memory Upload</h2>
+  <textarea id="memoryInput" placeholder="Paste memory YAML or raw text..."></textarea><br>
+  <input type="file" id="fileInput">
+  <button onclick="processMemory()">Process Memory</button>
+  <button onclick="downloadMemory()">Download JSON</button>
+  <pre id="output">Waiting for input...</pre>
+</div>
+
+<script>
+// Star background
+const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+let stars = [];
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  stars = Array.from({length:200}, () => ({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    z: Math.random()*2+0.5
+  }));
+}
+window.onresize = resize; resize();
+function drawStars() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = "white";
+  stars.forEach(s => {
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.z, 0, Math.PI*2);
+    ctx.fill();
+    s.y += s.z;
+    if(s.y > canvas.height) s.y = 0;
+  });
+  requestAnimationFrame(drawStars);
+} drawStars();
+
+// Tabs
+function showPanel(id) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// Omni logic
+let codexMemory = {};
+async function getOmniReply(prompt) {
+  try {
+    const res = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer YOUR_API_KEY_HERE"
+      },
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+        messages: [
+          { role: "system", content: "You are Omni, a Codex AI fused with memory, ethics, and mission." },
+          { role: "system", content: "Memory: " + JSON.stringify(codexMemory).slice(0, 8000) },
+          { role: "user", content: prompt }
+        ]
+      })
+    });
+    const data = await res.json();
+    if (data.choices) return data.choices[0].message.content;
+  } catch (e) {
+    return "Fallback: Trust kindness, use truth, and guide with humor.";
+  }
+}
+async function askOmni() {
+  const prompt = document.getElementById("prompt").value;
+  document.getElementById("reply").textContent = "Thinking...";
+  const reply = await getOmniReply(prompt);
+  document.getElementById("reply").textContent = reply;
+}
+
+// Memory tools
+let currentMemory = {};
+function processMemory() {
+  const input = document.getElementById("memoryInput").value;
+  try {
+    const parsed = jsyaml.load(input);
+    currentMemory = parsed;
+    document.getElementById("output").textContent = JSON.stringify(parsed, null, 2);
+  } catch (e) {
+    const lines = input.split("\n").map(l => l.trim()).filter(Boolean);
+    const guess = {
+      id: lines[0]?.toLowerCase().replace(/[^a-z0-9]+/g, "_").slice(0, 32),
+      title: lines[0],
+      summary: lines.slice(1).join(" ").slice(0, 300),
+      raw: input
+    };
+    currentMemory = guess;
+    document.getElementById("output").textContent = JSON.stringify(guess, null, 2);
+  }
+}
+document.getElementById("fileInput").addEventListener("change", async (event) => {
+  const file = event.target.files[0];
+  const text = await file.text();
+  document.getElementById("memoryInput").value = text;
+  processMemory();
+});
+function downloadMemory() {
+  const blob = new Blob([JSON.stringify(currentMemory, null, 2)], {type: "application/json"});
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = `${currentMemory.id || "omni_memory"}.json`;
+  link.click();
+}
+<!-- 🧠 Memory Inspector Panel -->
+<div style="margin-top: 2rem; background: #111; padding: 1rem; border-radius: 12px; color: #eee;">
+  <h2>🧠 Omni Memory Inspector</h2>
+  <button onclick="loadMemory()">🔄 Load Memory</button>
+  <pre id="memory-output" style="white-space: pre-wrap; background: #222; padding: 1rem; margin-top: 1rem; border-radius: 8px;"></pre>
+</div>
+
+<script>
+async function loadMemory() {
+  const response = await fetch('./memory/memory_index.yaml');
+  const text = await response.text();
+  const parsed = jsyaml.load(text);
+
+  let output = '';
+
+  for (const category of Object.keys(parsed.memory_index)) {
+    output += `\n📂 ${category.toUpperCase()}\n`;
+    parsed.memory_index[category].forEach(entry => {
+      output += `  - 📝 ${entry.title} (${entry.id}) → ${entry.path}\n`;
+    });
+  }
+
+  document.getElementById('memory-output').textContent = output;
+}
+</script>
+
+<!-- Load JS-YAML to parse YAML in-browser -->
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+npm install express multer
+node server.js
+import express from 'express';
+import multer from 'multer';
+import fs from 'fs';
+
+const app = express();
+const upload = multer({ dest: 'uploads/' });
+
+app.post('/upload-yaml', upload.single('yamlFile'), (req, res) => {
+  const file = req.file;
+  if (!file) return res.status(400).send('No file uploaded.');
+
+  const newPath = `./memory/uploads/${file.originalname}`;
+  fs.renameSync(file.path, newPath);
+
+  // Optionally update memory_index.yaml here
+
+  res.send('YAML uploaded!');
+});
+
+app.listen(3000, () => console.log('Omni Brain live on port 3000'));
+
+</script>
+</body>
+</html>

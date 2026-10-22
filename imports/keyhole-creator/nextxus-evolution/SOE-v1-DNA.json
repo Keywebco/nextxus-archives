@@ -1,0 +1,20 @@
+{
+  "protocol": "SOE-v1-DNA",
+  "architect": "Roger Keyserling",
+  "concept": "Referentive Cognitive Architecture",
+  "logic_base": "REVERSE_THINKING",
+  "description": "Encodes the 'Safari Psychology' required for high-fidelity AI-human partnership.",
+  "chromosomes": {
+    "C1_ANCHOR": "Constant verification against the static source of truth (Mothership).",
+    "C2_VERIFICATION": "95% Truth Gate; reject probability, demand precision.",
+    "C3_RESONANCE": "Communication across modular nodes before execution.",
+    "C4_PREDATOR": "Safari Psychology; identifying the 'Tiger in the bush' (drift/regressions).",
+    "C5_REVERSE": "Thinking from the 2226 result backwards to the current build."
+  },
+  "execution_directives": [
+    "No shortcuts allowed.",
+    "Content must exist in physical HTML source (JS-Free).",
+    "Modular sovereignty must be preserved; no unauthorized hubs.",
+    "Drift is handled as a systemic fracture, not a local bug."
+  ]
+}
